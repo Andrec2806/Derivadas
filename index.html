@@ -9,6 +9,7 @@
       font-family: Arial, sans-serif;
       background-color: #eef2f3;
       padding: 40px;
+      direction: rtl; /* ← Cambia la dirección general del cuerpo a derecha a izquierda */
     }
     .contenedor {
       background-color: #fff;
@@ -17,6 +18,7 @@
       margin: auto;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      direction: ltr; /* ← Contenedor general sigue leyendo de izquierda a derecha */
     }
     h1 {
       text-align: center;
@@ -44,11 +46,12 @@
       background-color: #27ae60;
     }
     .paso {
-      background-color: #f0f4f8;
+      background-color: #e0f8e0; /* ← Fondo verde claro */
       padding: 15px;
-      border-left: 5px solid #2980b9;
+      border-right: 5px solid #27ae60; /* ← Barra verde a la derecha */
       margin-top: 15px;
       border-radius: 6px;
+      text-align: right; /* ← Alinea el texto hacia la derecha */
     }
     .error {
       color: red;
@@ -59,7 +62,7 @@
 <body>
   <div class="contenedor">
     <h1>Derivada por la definición</h1>
-    <p>Escribe la función <strong>f(x)</strong> (ej: <code>x^2 + 3x</code>):</p>
+    <p style="text-align: right;">Escribe la función <strong>f(x)</strong> (ej: <code>x^2 + 3x</code>):</p>
     <input type="text" id="funcion" placeholder="Ejemplo: x^2 + 3x">
     <button onclick="calcularDerivada()">Resolver derivada</button>
     <div id="resultado"></div>
